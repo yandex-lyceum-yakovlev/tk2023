@@ -1,7 +1,12 @@
 import tkinter
+import random
+
 
 def draw(event):
-    canvas.create_oval((100, 100), (300, 300), fill='red')
+    x1 = random.randint(0, 500)
+    y1 = random.randint(0, 500)
+    d = random.randint(0, 100)
+    canvas.create_oval((x1, y1), (x1 + d, y1 + d), fill='red')
 
 
 master = tkinter.Tk()
