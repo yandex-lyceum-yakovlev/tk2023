@@ -10,6 +10,9 @@ def key_pressed(event):
         canvas.move(oval, -10, 0)
     if event.keysym == 'Right':
         canvas.move(oval, 10, 0)
+    x = canvas.coords(oval)[0] % 600
+    y = canvas.coords(oval)[1] % 600
+    canvas.coords(oval, (x, y, x + 10, y + 10))
 
 
 master = tkinter.Tk()
